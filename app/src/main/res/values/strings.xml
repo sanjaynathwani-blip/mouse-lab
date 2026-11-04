@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mouse Lab</string>
+    <string name="tagline">Small tools for your mouse. Everything runs on this device.</string>
+
+    <string name="tab_polling">Polling rate</string>
+    <string name="tab_rotation">Mouse rotation</string>
+
+    <string name="how_title">How it is calculated</string>
+    <string name="touchpad_hint">That looked like touchpad or touch input. These tools measure a mouse, so plug one in or connect it over Bluetooth. Press Escape to stop.</string>
+
+    <!-- Polling rate tester -->
+    <string name="poll_title">Polling rate tester</string>
+    <string name="poll_lead">See how many times per second your mouse reports its position. Click the box, then move the mouse in fast circles.</string>
+    <string name="poll_idle">Click to start. Your cursor is captured while measuring.</string>
+    <string name="poll_reports">%1$s reports · Esc or right-click to stop</string>
+    <string name="poll_current">Current</string>
+    <string name="poll_average">Average</string>
+    <string name="poll_peak">Peak</string>
+    <string name="poll_reset">Reset</string>
+    <string name="poll_nearest">Closest standard rate: %1$s Hz</string>
+    <string name="poll_note">Each report is timed by the kernel when the mouse sends it, so this reads the real rate rather than the screen refresh rate. Fast circles work best.</string>
+    <string name="poll_how_p1">Every mouse report carries a timestamp. The tool measures the gap between consecutive reports and ignores gaps over %1$d ms, which are pauses in your movement.</string>
+    <string name="poll_how_p2">Average is the number of gaps divided by the time they add up to. Current uses the last quarter second of movement, and peak is the highest of those readings so far. Averaging over time keeps bursts of reports with near-identical timestamps from inflating them.</string>
+
+    <!-- Mouse rotation -->
+    <string name="rot_title">Mouse rotation</string>
+    <string name="rot_lead">Check whether your side to side swipes are really horizontal with your natural grip, then get an angle to correct it.</string>
+    <string name="rot_step1">1. Click inside the box to start. Your cursor is captured while measuring.</string>
+    <string name="rot_step2">2. Swipe the mouse side to side at least %1$d times.</string>
+    <string name="rot_step3">3. Right-click or press Escape to stop and see the result.</string>
+    <string name="rot_stop">Right-click or press Escape to stop and see the result.</string>
+    <string name="rot_idle">Click to start</string>
+    <string name="rot_measuring">Measuring: %1$d swipes</string>
+    <string name="rot_restart">Click to restart</string>
+    <string name="rot_result">Recommended rotation</string>
+    <string name="rot_few">Only %1$d swipes counted. Swipe at least %2$d times and try again.</string>
+    <string name="rot_margin">Margin of error ±%1$s° over %2$d swipes. More swipes narrow it.</string>
+    <string name="rot_note">Positive angles rotate the sensor output clockwise. Vendors differ on sign, so test with a few swipes after you apply it. Movement is read as raw sensor counts, without Android\'s pointer acceleration.</string>
+    <string name="rot_how_p1">While you measure, every mouse report gives a small move (dx, dy). Each swipe is reduced to its net movement, and the tool adds up dx², dy² and dx·dy across the swipes.</string>
+    <string name="rot_formula">θ = ½ · atan2(2 · Σ dx·dy, Σ dx² − Σ dy²)</string>
+    <string name="rot_how_p2">Those three sums give the direction your swipes line up with: the straight line that sits closest to all your movements. Because the sums use squares and products, swiping left and right gives the same answer as swiping one way.</string>
+    <string name="rot_how_p3">The recommended rotation is that line\'s angle from horizontal, rounded to one decimal. A swipe is counted when you reverse direction after a clear stroke, so small jitters don\'t add to the total.</string>
+
+    <string name="credit">Tools ported from OpenMouse (openmouse.app). Licensed under the GNU AGPL v3.</string>
+    <string name="source_link">Source code</string>
+</resources>

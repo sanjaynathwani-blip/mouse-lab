@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A mouse outline with a scroll wheel and a short swipe trace beside it (108dp adaptive canvas). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:strokeColor="@color/icon_fg"
+        android:strokeWidth="3.5"
+        android:fillColor="#00000000"
+        android:pathData="M54,34 C63,34 68,40 68,49 L68,63 C68,71 62,76 54,76 C46,76 40,71 40,63 L40,49 C40,40 45,34 54,34 Z" />
+    <path
+        android:strokeColor="@color/icon_fg"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,42 L54,49" />
+    <path
+        android:strokeColor="@color/icon_fg"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.55"
+        android:pathData="M30,60 L35,58 M73,50 L78,48" />
+</vector>
