@@ -63,8 +63,8 @@ private fun App() {
             .safeDrawingPadding(),
     ) {
         val wide = maxWidth >= 600.dp
-        // The rotation box gets most of the window, so long swipes have room.
-        val rotationPad = (maxHeight * 0.55f).coerceIn(280.dp, 560.dp)
+        // The rotation box is as big as it can be while the result below it stays in view.
+        val rotationPad = (maxHeight * 0.42f).coerceIn(260.dp, 520.dp)
         Column(
             Modifier
                 .fillMaxSize()
@@ -79,7 +79,7 @@ private fun App() {
                 verticalArrangement = Arrangement.spacedBy(24.dp),
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(stringResource(R.string.app_name), color = Lab.text1, fontSize = 18.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(end = 12.dp))
+                    Text(stringResource(R.string.title), color = Lab.text1, fontSize = 18.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(end = 12.dp))
                     ToolChip(stringResource(R.string.tab_polling), tool == Tool.Polling) { tool = Tool.Polling }
                     ToolChip(stringResource(R.string.tab_rotation), tool == Tool.Rotation) { tool = Tool.Rotation }
                 }

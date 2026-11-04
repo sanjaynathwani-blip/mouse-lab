@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mouse Lab</string>
+    <string name="title">Mouse Lab</string>
     <string name="tagline">Small tools for your mouse. Everything runs on this device.</string>
 
     <string name="tab_polling">Polling rate</string>

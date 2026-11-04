@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.withStyle
@@ -105,7 +106,8 @@ fun ResultWell(label: String, value: String, unit: String? = null, modifier: Mod
             color = Lab.text1,
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            fontFamily = FontFamily.Monospace,
+            letterSpacing = (-0.5).sp,
+            style = TextStyle(fontFeatureSettings = "tnum"), // equal-width figures, so readings don't jitter
         )
         extra()
     }
