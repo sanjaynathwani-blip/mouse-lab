@@ -11,16 +11,16 @@ does it become the latest release that the README's download link points to.
 
 ## 2. Build
 
-The release key lives in `~/.config/mouse-lab/` (never in the repo); it is the same key that signs
-Perfect Sound. Every release must be signed with it, or Android refuses to update over earlier
-installs.
+The release key is Mouse Lab's own (certificate `CN=Mouse Lab`). It lives in `~/.config/mouse-lab/`
+(never in the repo), with a backup in the owner's Google Drive. Every release must be signed with
+it, or Android refuses to update over earlier installs.
 
 ```sh
 ./gradlew testDebugUnitTest assembleRelease
 mkdir -p build/release && cp app/build/outputs/apk/release/app-release.apk build/release/MouseLab.apk
 (cd build/release && sha256sum MouseLab.apk > SHA256SUMS)
 
-# Same signing certificate as the current release? (SHA-256 89:81:0A:22...)
+# Same signing certificate as the current release? (SHA-256 39:FE:63:D4...)
 apksigner verify --print-certs build/release/MouseLab.apk | grep SHA-256
 ```
 
